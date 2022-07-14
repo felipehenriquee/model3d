@@ -8,6 +8,7 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
     #controls {
       position: absolute;
       top: 0x;
@@ -89,7 +90,65 @@
       display: none;
     }
       
-    .hide{
+
+    body{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .aviso{
+      position: absolute;
+  /* position the div in center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+      background: linear-gradient(182.59deg, #FFFFFF 2.16%, #F4E7F5 97.84%);
+      box-shadow: 0px 8px 20px rgba(82, 70, 143, 0.25);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 40px;
+
+
+      text-align: center;
+      border-radius: 15px;
+      font-size: 18px;
+      font-family: 'Titillium Web', sans-serif;
+      color: #52468F;
+      /* animation: aparecer 0.2s linear forwards; */
+      z-index: 100;
+    }
+    .some{
+      animation: sumir 2s linear forwards;
+      animation-delay: 1s;
+    }
+  @keyframes aparecer {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+
+
+  }
+  @keyframes sumir {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+
+    }
+
+
+  }
+
+
+  .hide{
       display: none;
     }
     /* This keeps child nodes hidden while the element loads */
@@ -99,11 +158,12 @@
   </style>
 </head>
 <body>
+
     <model-viewer 
     enable-pan
-    style="width: 100%; height: 90vh" 
-    id="dimension-demo" ar ar-modes="webxr" 
-    ar-scale="fixed" camera-orbit="-30deg auto auto" 
+    style="width: 100%; height: 90vh" loading="eager" 
+    id="dimension-demo" ar ar-modes="webxr" xr-environment 
+    ar-scale="auto" camera-orbit="-30deg auto auto" 
     max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls 
     src="https://simplexr-vritems.s3.sa-east-1.amazonaws.com/nesher/cozinhas-nesher/80V5V5/COZINHA BURGUESA_39_v03.glb" 
     >
@@ -118,35 +178,37 @@
     <button slot="hotspot-dot-X-Y-Z" class="dot hide" data-position="-1 -1 -1" data-normal="-1 0 0"></button>
     <button slot="hotspot-dim-X-Y" class="dim hide" data-position="-1 -1 0" data-normal="-1 0 0"></button>
     <button slot="hotspot-dot-X-Y+Z" class="dot hide" data-position="-1 -1 1" data-normal="-1 0 0"></button>
-      
+
+    <p class="aviso hide some" id="aviso">Link copiado!</p>
+
 
         <div id="controls" class="">
           <button class="btnRedimensionar" id="shared">
-            <img src="https://firebasestorage.googleapis.com/v0/b/bird-9fcef.appspot.com/o/simplexr%2Fexpandir.svg?alt=media&token=2d0754ce-bb7f-4aa8-96da-725802e4e183" alt="">
+            <img src="./assets/pages/expandir.svg" alt="">
           </button>
 
           <button class="btnRedimensionar" id="redimensionar">
-            <img src="https://firebasestorage.googleapis.com/v0/b/bird-9fcef.appspot.com/o/simplexr%2Fdimensao.svg?alt=media&token=afc6cb10-7b80-45bc-9a97-d1cb9372b72a" alt="">
+            <img src="./assets/pages/dimensao.svg" alt="">
           </button>
           <button class="btnRedimensionar" id="posicao" >
-            <img src="https://firebasestorage.googleapis.com/v0/b/bird-9fcef.appspot.com/o/simplexr%2Ftextura.svg?alt=media&token=dc5e598d-df5f-4f3a-bf1b-e061cd7554da" alt="">
+            <img src="./assets/pages/textura.svg" alt="">
           </button>
           <div class="posicao hide" id="divPosicao">
             <!-- frente -->
             <button class="btnRedimensionar" id="posicao1" >
-              <img src="https://firebasestorage.googleapis.com/v0/b/bird-9fcef.appspot.com/o/simplexr%2Ftextura.svg?alt=media&token=dc5e598d-df5f-4f3a-bf1b-e061cd7554da" alt="">
+              <img src="./assets/pages/textura.svg" alt="">
             </button>
             <button class="btnRedimensionar" id="posicao2" >
-              <img src="https://firebasestorage.googleapis.com/v0/b/bird-9fcef.appspot.com/o/simplexr%2Ftextura.svg?alt=media&token=dc5e598d-df5f-4f3a-bf1b-e061cd7554da" alt="">
+              <img src="./assets/pages/textura.svg" alt="">
             </button>
             <button class="btnRedimensionar" id="posicao3" >
-              <img src="https://firebasestorage.googleapis.com/v0/b/bird-9fcef.appspot.com/o/simplexr%2Ftextura.svg?alt=media&token=dc5e598d-df5f-4f3a-bf1b-e061cd7554da" alt="">
+              <img src="./assets/pages/textura.svg" alt="">
             </button>
             <button class="btnRedimensionar" id="posicao4" >
-              <img src="https://firebasestorage.googleapis.com/v0/b/bird-9fcef.appspot.com/o/simplexr%2Ftextura.svg?alt=media&token=dc5e598d-df5f-4f3a-bf1b-e061cd7554da" alt="">
+              <img src="./assets/pages/textura.svg" alt="">
             </button>
             <button class="btnRedimensionar" id="posicao5" >
-              <img src="https://firebasestorage.googleapis.com/v0/b/bird-9fcef.appspot.com/o/simplexr%2Ftextura.svg?alt=media&token=dc5e598d-df5f-4f3a-bf1b-e061cd7554da" alt="">
+              <img src="./assets/pages/textura.svg" alt="">
             </button>
           </div>
         </div>
@@ -154,7 +216,7 @@
       
       <script type="module">
 
-        console.log(window.location)
+        var exposure = 0;
         var showDimension = false;
         var showPosicao = false;
         
@@ -162,6 +224,7 @@
         var glb = location.href.split('?')[1].split('&')[0].split('=');
         var usdz = location.href.split('?')[1].split('&')[1].split('=');
         var code = location.href.split('?')[1].split('&')[2].split('=');
+
 
         console.log(window.location.href)
         modelViewer.src = glb[1];
@@ -172,6 +235,7 @@
         const btnShared = modelViewer.querySelector('#shared');
         const btnPosicao = modelViewer.querySelector('#posicao');
         const divPosicao = modelViewer.querySelector('#divPosicao');
+        const divAviso = modelViewer.querySelector('#aviso');
         
         const btnPosicao1 = modelViewer.querySelector('#posicao1');
         const btnPosicao2 = modelViewer.querySelector('#posicao2');
@@ -200,13 +264,14 @@
           });
         });
         btnShared.addEventListener('click', () => {
+          divAviso.classList.add('hide');
           var inputc = document.body.appendChild(document.createElement("input"));
-          inputc.value = `${window.location.origin}/#/catalogo/${code}`;
+          inputc.value = `https://teste.simplexr.com.br/#/catalogo/${code}`;
           inputc.focus();
           inputc.select();
           document.execCommand('copy');
           inputc.parentNode.removeChild(inputc);
-          alert("Link copiado")
+          divAviso.classList.remove('hide');
         });
         btnPosicao.addEventListener('click', () => {
           showPosicao = !showPosicao;
@@ -274,8 +339,10 @@
           modelViewer.cameraOrbit = "-90deg 90deg 10m"
 
         });
-      
+
+
         modelViewer.addEventListener('load', () => {
+
           const center = modelViewer.getCameraTarget();
           const size = modelViewer.getDimensions();
           const x2 = size.x / 2;
@@ -346,9 +413,10 @@
             name: 'hotspot-dot-X-Y+Z',
             position: `${center.x - x2} ${center.y - y2} ${center.z + z2}`
           });
+
         });
 
-
+        
       </script>
 </body>
 </html>
