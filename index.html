@@ -287,7 +287,7 @@
         btnShared.addEventListener('click', () => {
           divAviso.classList.add('hide');
           var inputc = document.body.appendChild(document.createElement("input"));
-          inputc.value = `https://teste.simplexr.com.br/#/catalogo/${code}`;
+          inputc.value = `https://simplexr-cliente.herokuapp.com/catalogo/${code}`;
           inputc.focus();
           inputc.select();
           document.execCommand('copy');
