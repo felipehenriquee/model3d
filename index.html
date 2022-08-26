@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt">
 <head>
@@ -172,15 +173,23 @@
   </style>
 </head>
 <body>
-
-    <model-viewer 
+  <model-viewer id="model-viewer"
+  src="https://simplexr-vritems.s3.sa-east-1.amazonaws.com/rack/moveis-bechara/92FO59/RACK DOHA_preto_v06.glb" 
+  ios-src="https://simplexr-vritems.s3.sa-east-1.amazonaws.com/rack/moveis-bechara/92FO59/RACK DOHA_preto_v06.usdz" 
+  alt="RACK DOHA PRETO" shadow-intensity="1" camera-controls="true" auto-rotate="true" autoplay="true" 
+  loading="eager" resizable="" id="dimension-demo"
+  ar-scale="auto" 
+  environment-image="neutral" 
+  ar="true" ar-status="not-presenting"><img src="/instruction.webp" class="styles_tutorial__trGBP"><a slot="ar-button" class="styles_button__Bw8s9"><img src="/vrItem.svg"><span>Experimente em seu espaço</span></a></model-viewer>
+  
+    <!-- <model-viewer 
     enable-pan environment-image="neutral"
     style="width: 100%; height: 98vh" loading="eager" 
     id="dimension-demo" ar ar-modes="webxr quick-look scene-viewer" xr-environment 
     ar-scale="auto" camera-orbit="-30deg auto auto" 
     max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls 
     src="https://simplexr-vritems.s3.sa-east-1.amazonaws.com/nesher/cozinhas-nesher/80V5V5/COZINHA BURGUESA_39_v03.glb" 
-    >
+    > -->
     <button slot="hotspot-dot+X-Y+Z" class="dot hide" data-position="1 -1 1" data-normal="1 0 0"></button>
     <button slot="hotspot-dim+X-Y" class="dim hide" data-position="1 -1 0" data-normal="1 0 0"></button>
     <button slot="hotspot-dot+X-Y-Z" class="dot hide" data-position="1 -1 -1" data-normal="1 0 0"></button>
